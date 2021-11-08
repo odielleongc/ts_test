@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register tests/**/*.test.ts",
     "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test",
     "compile:watch": "tsc -w"
   },
@@ -18,6 +18,10 @@
     "mocha": "^9.1.1",
     "nyc": "^15.1.0",
     "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.3"
+  },
+  "_moduleAliases": {
+    "@utils": "./out/utils/index.js"
   }
 }

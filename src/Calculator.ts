@@ -1,4 +1,4 @@
-import { echo } from './utils/';
+import { echo } from '@utils';
 
 export default class calculator {
   static Sum(a: number, b: number): number {
